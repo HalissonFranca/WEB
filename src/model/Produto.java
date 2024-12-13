@@ -20,7 +20,7 @@ public class Produto {
     public Produto() {
     }
 
-    public Long getId() {
+    public Long geId() {
         return id;
     }
 

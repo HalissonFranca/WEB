@@ -8,7 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
+// PedidoRepository.java
+public interface PedidoRepository extends JpaRepository<Pedido, Long> {
+    List<Pedido> findByIdCliente(Long idCliente);
 
-public interface ProdutoRepository extends JpaRepository<Produto, Long> {
-    Optional<Produto> findByNome(String nome);
+    List<Pedido> findByIdsProdutosContaining(Long idProduto);
 }

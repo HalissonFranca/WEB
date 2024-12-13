@@ -7,14 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
-
-//public interface PedidoRepository extends JpaRepository<Pedido, Long> {
-//    List<Pedido> findByIdCliente(Long idCliente);
-//    List<Pedido> findByIdsProdutosContaining(Long idProduto);
-//}
-
-// PedidoRepository.java
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
-    List<Pedido> findByIdCliente(Long idCliente);
-    List<Pedido> findByIdsProdutosContaining(Long idProduto);
+    List<Pedido> findByClienteId(Long idCliente);
+    List<Pedido> findByProdutosId(Long idProduto);
 }
